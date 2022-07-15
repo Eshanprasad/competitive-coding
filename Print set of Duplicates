@@ -1,0 +1,16 @@
+list = [1,2,3,4,6,7,1,4,2]
+s=set()
+
+for i in range(len(list)):
+    a=list.count(list[i])
+    if a>1:
+        s.add(list[i])
+
+print(s)                                                      # output : {1, 2, 4}
+
+
+
+# Approach 2
+
+list = [1,2,3,4,6,7,1,4,2]
+print(set(a for a in list if list.count(a)>1))               # output : {1, 2, 4}
