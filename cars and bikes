@@ -1,0 +1,17 @@
+vehicles = int(input('enter the number of vehicles:'))
+wheels = int(input('enter the number of wheels:'))
+
+
+# (x/4) + (y/2) = vehicles  (total number of vehicles)     in this equation x/4 = number of 4 wheelers, y/2 = number of 2 wheelers
+# x + y = Wheels            (total number of wheels)
+
+
+
+# by solving the above two equations we get below two equations
+
+
+
+y = (4*vehicles) - wheels
+x = wheels - y
+print('number of two - wheelers:',y/2)
+print('number of 4- wheelers:',x/4)
