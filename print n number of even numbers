@@ -1,3 +1,15 @@
 n = int(input('enter the number of values: '))
-for i in range(0,(n*2)+2,2):
+for i in range(0,(n*2),2):                                        # if zero is also included we use this code
+    print(i)
+
+
+
+
+
+
+
+# Approach 2
+
+n = int(input('enter the number of values: '))
+for i in range(2,(n*2)+2,2):                                        # if zero not included we use this code
     print(i)
