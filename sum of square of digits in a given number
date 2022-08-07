@@ -2,7 +2,7 @@ n = int(input('enter the number'))
 x = n
 sum = 0
 while x > 0:
-    sum = sum + (x % 10)*(x % 10)
+    sum = sum + (x % 10)*(x % 10)                # we can also use: sum = sum + (x % 10)**2   for finding the square of digit,    for finding cube of that digit: sum = sum + (x % 10)**3
     x = x//10
 
 print('sum of digits:',sum)
