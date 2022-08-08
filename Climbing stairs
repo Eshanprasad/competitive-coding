@@ -1,8 +1,0 @@
-# Question : There are n number of stairs, find the total number of unique ways to climb those 'n' number of steps if you can climb 1step  or 2 steps at a time.
-
-n=int(input('enter the number of steps:'))
-path = {1: 1, 2: 2, 3: 3, 4: 5 }                  # if n=2, there are two ways of climbing ,,  if n = 3 , there are 3 ways of climbing,, if n=4, there are 5 ways of climbing
-for i in range(5, n+1):
-    path[i] = path[i-1] + path[i-2]               # logic here is : to climb 4 steps : it takes (total possibilities of climbing on to 3rd step + total possibilities of climbing on to 2nd step)
-
-print(path[n])
