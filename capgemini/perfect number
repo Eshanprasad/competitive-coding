@@ -1,0 +1,10 @@
+n = int(input('enter any number:'))
+l = []
+for i in range(1,n):
+    if n%i == 0:
+        l.append(i)
+
+if sum(l)==n:
+    print('{} is Perfect number'.format(n))
+else:
+    print('{} is Not a perfect number'.format(n))
