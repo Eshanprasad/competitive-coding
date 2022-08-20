@@ -8,3 +8,20 @@ if sum(l)==n:
     print('{} is Perfect number'.format(n))
 else:
     print('{} is Not a perfect number'.format(n))
+
+
+
+
+
+
+# APPROACH 2
+n = int(input('enter any number:'))
+l = 0
+for i in range(1,n):
+    if n%i == 0:
+        l=l+i
+
+if l==n:
+    print('{} is Perfect number'.format(n))
+else:
+    print('{} is Not a perfect number'.format(n))
