@@ -1,0 +1,15 @@
+n = int(input('enter the number to up which:'))
+l = []
+count=0
+for i in range(3, n + 1):
+    if all(i % x != 0 for x in range(2, i)):
+        l.append(i)
+
+for ele in l:
+    sum = 0
+    for j in range(2, ele):
+        if all(j % y != 0 for y in range(2, j)):
+            sum = sum + j
+            if sum == ele:
+                count = count+1
+print(count)
