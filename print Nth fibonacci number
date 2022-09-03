@@ -1,0 +1,16 @@
+n = int(input('enter the nth number: '))
+a = 1
+b = 1
+c = 0
+x = 0
+while x!=n-2:
+    c = a+b
+    a = b
+    b = c
+    x = x+1
+
+
+if n == 1 or n == 2:
+    print(a)
+else:
+    print(c)
