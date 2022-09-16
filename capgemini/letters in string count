@@ -1,0 +1,22 @@
+"""
+input:
+aaabbuuuuuooppp
+
+output:
+a3b2u5o2p3
+"""
+
+# code starts here
+
+a = input('enter any string: ')
+li = []
+string_li = []
+for i in a:
+    if i in li:
+        continue
+    else:
+        li.append(i)
+for ele in li:
+    var = ele + str(a.count(ele))
+    string_li.append(var)
+print(''.join(string_li))
