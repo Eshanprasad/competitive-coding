@@ -25,3 +25,12 @@ def duplicate_count(text):
 # approach 2
 def duplicate_count(s):
   return len([c for c in set(s.lower()) if s.lower().count(c)>1])
+
+
+
+# approach 3
+count = 0
+for x in set(text.lower()):
+    if text.lower().count(x)>1:
+        count+=1
+print(count)
