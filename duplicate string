@@ -1,0 +1,27 @@
+"""
+duplicate_count("") returns 0
+duplicate_count("abcde") returns 0
+duplicate_count("abcdeaa")  returns 1
+duplicate_count("abcdeaB")  returns 2
+duplicate_count("Indivisibilities")  returns 2
+
+"""
+
+
+def duplicate_count(text):
+    out = 0
+    l=[]
+    str_list = [x.lower() for x in text]
+    for i in str_list:
+        if i in l:
+            continue
+        else:
+            l.append(i)
+    for ele in l:
+        if str_list.count(ele) > 1:
+            out += 1
+    return out
+
+# approach 2
+def duplicate_count(s):
+  return len([c for c in set(s.lower()) if s.lower().count(c)>1])
