@@ -1,0 +1,10 @@
+find the number of  characters in a string which occurs exactly 2 times
+
+s = input()
+unique = set(s)
+count = 0
+for i in unique:
+    if s.count(i)==2:
+        count += 1
+
+print(count)
