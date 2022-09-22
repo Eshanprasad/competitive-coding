@@ -1,0 +1,16 @@
+# check if the given number is a prime number and also check if there is 3 in the number
+# return 1 if True, return 0 if False
+
+
+def fun(n):
+    if all(n%i !=0 for i in range(2,n)):
+        a = str(n)
+        if '3' in a:
+            return 1
+        else:
+            return 0
+    else:
+        return 0
+
+n = int(input())
+print(fun(n))
