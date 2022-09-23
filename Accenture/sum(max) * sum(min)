@@ -1,0 +1,21 @@
+"""
+I / p : 8 4 5 3 2 6 9 1
+ 
+O / p : 189 120 90 45 15 9 0 0
+"""
+
+l = [8,4,5,3,2,6,9,1]
+l_output = []
+for ele in l[:]:
+    s_min = 0
+    s_max = 0
+    a = ele
+    for j in range(len(l)):
+        if a > l[j]:
+            s_min += l[j]
+        elif a < l[j]:
+            s_max += l[j]
+    l_output.append(s_min * s_max)
+    l.remove(ele)
+
+print(l_output)
