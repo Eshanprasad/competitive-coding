@@ -1,0 +1,27 @@
+"""
+You Have To Identify and Count all Z numbers between a given range ( i.e 0 to n ) and Print the same .
+Z Number : - A Z number is a number that follows a Specific pattern that states that the first digit of a number will be greater
+than the Second digit and second digit will be smaller than the third digit and so on and vice versa .
+i.e - A [ 0 ] > A [ 1 ] < A [ 2 ] > A [ 3 ] ... Or A [ 0 ] < A [ 1 ] > A [ 2 ] < A [ 3 ] ....
+"""
+n = int(input())
+count = 0
+for i in range(0,n):
+    s = str(i)
+    if len(s) == 1:
+        count += 1
+    elif len(s)==2:
+        if int(s[0]) > int(s[1]) or int(s[0]) < int(s[1]):
+            count += 1
+    elif len(s) == 3:
+        if int(s[0]) > int(s[1]) < int(s[2]) or int(s[0]) < int(s[1]) > int(s[2]):
+            count += 1
+    elif len(s) == 4:
+        if int(s[0]) > int(s[1]) < int(s[2]) > int(s[3]) or int(s[0]) < int(s[1]) > int(s[2]) < int(s[3]):
+            count += 1
+    elif len(s) == 5:
+        if int(s[0]) > int(s[1]) < int(s[2]) > int(s[3]) < int(s[4]) or int(s[0]) < int(s[1]) > int(s[2]) < int(s[3]) > int(s[4]):
+            count += 1
+
+
+print(count)
