@@ -1,0 +1,47 @@
+"""
+You are given 3 Arrays of size N, N-1 , N-2 namely A, B, C respectively .
+you have to print two integers x and y in separate line such that:
+
+1. Xis a element of A but not of B.
+2. Y is a element of B but not of C.
+
+Input format:
+* First line denotes an Integer N
+* 2nd line consist of N space separated integer denoting elements of A
+
+* 3rd line consist of N-1 space separated integer denoting elements of B
+
+* 4th line consist of N-2 space separated integer denoting elements of C
+
+Example :
+3
+123
+23
+2
+Output
+1
+3
+
+
+Example :
+5
+2 234 22 29 21
+234 21 29 2
+234 2 29
+Output
+22
+21
+"""
+
+
+# code starts here
+n = int(input())
+a1 = [int(x) for x in input().split()]
+a2 = [int(x) for x in input().split()]
+a3 = [int(x) for x in input().split()]
+for i in a1:
+    if (i in a1) and (i not in a2):
+        print(i)
+for j in a2:
+    if (j in a2) and (j not in a3):
+        print(j)
