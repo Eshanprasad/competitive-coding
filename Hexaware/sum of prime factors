@@ -1,0 +1,33 @@
+"""
+input:20
+output:7
+
+
+input:315
+output:15
+"""
+
+# code 1
+n = int(input())
+sum = 0   #sum_of_prime_factors
+l = []    # list of factors of n
+for i in range(2,n):   # not considering 1 because 1 is not a prime number
+    if n%i==0:
+        l.append(i)
+for i in l:
+    if all(i%j!=0 for j in range(2,i)):
+        sum = sum+i
+print(sum)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+# code 2
+n = int(input())
+sum = 0   #sum_of_prime_factors
+l = []    # list of factors of n
+for i in range(2,n):   # not considering 1 because 1 is not a prime number
+    if n%i==0:
+        if all(i%j!=0 for j in range(2,i)):
+            sum = sum + i
+print(sum)
