@@ -1,0 +1,7 @@
+start = int(input('enter the fahrenheit value: '))
+end = int(input('enter the end fahrenheit value: '))
+step = int(input('enter the step value: '))
+for i in range(start, end, step):
+    a = (5*(i-32))/9
+    print('fahrenheit:',i, end="\t")
+    print('celsius:',a)
