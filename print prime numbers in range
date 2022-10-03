@@ -1,0 +1,15 @@
+def isprime(n):
+    f = True
+    for i in range(2,n):
+        if n%i==0:
+            f = False
+            break
+    if f==False:
+        return False
+    elif f==True:
+        return True
+n = int(input('enter starting number: '))
+m = int(input('enter ending number: '))
+for i in range(n,m+1):
+    if isprime(i):
+        print(i)
