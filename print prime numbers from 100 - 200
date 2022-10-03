@@ -15,3 +15,15 @@ for num in range(100,200):
 for num in range(100,200):
     if all(num%i !=0 for i in range(2,num)):
         print(num)
+
+
+
+
+# code 3   (to print prime numbers in the given range)
+n = int(input("enter the start number"))
+m = int(input("enter the end number"))
+for i in range(n,m):
+    if i==1 or i==0:
+        continue
+    elif all(i%j!=0 for j in range(2,i)):
+        print(i)
