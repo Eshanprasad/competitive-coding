@@ -1,0 +1,11 @@
+l = [4,6,3,1,9,7,5,0,9,76,0,0,-1]
+li = []
+mini = None
+for j in range(len(l)):
+    mini = l[0]
+    for i in range(len(l)):
+        if l[i] < mini:
+            mini = l[i]
+    li.append(mini)
+    l.remove(mini)
+print(li)
