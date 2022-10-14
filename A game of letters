@@ -1,0 +1,17 @@
+"""
+A Game Of Letters
+Input : A boy carring bag slipped on floor
+
+Output : A oyb arringc agb ippedsl on oorfl
+
+boy => oy(start with vowel) + b === oyb
+
+"""
+a = "A boy carring bag slipped on floor"
+v = [x for x in "aAeEiIoOuU"]
+A = a.split()
+for i in range(len(A)):
+    for j in range(len(A[i])):
+        if A[i][j] in v:
+            A[i] = A[i][j:] + A[i][:j]
+print(" ".join(A))
