@@ -1,0 +1,34 @@
+"""
+"EBG13 rknzcyr." -->
+"ROT13 example."
+
+"This is my first ROT13 excercise!" -->
+"Guvf vf zl svefg EBG13 rkprepvfr!"
+"""
+
+
+alphabets = ' abcdefghijklmnopqrstuvwxyz'
+Alphabets = alphabets.upper()
+stri = ""
+l = [x for x in alphabets]
+cap_l = [x for x in Alphabets]
+i = input()
+for ele in i:
+    if ele == " ":
+        stri += ele
+        continue
+    if (ele in l):
+        a = l.index(ele)
+        if (a<=13):
+            stri += l[a+13]
+        else:
+            stri += l[a-13]
+    elif (ele in cap_l):
+        a = cap_l.index(ele)
+        if (a<=13):
+            stri += cap_l[a+13]
+        else:
+            stri += cap_l[a-13]
+    else:
+        stri += ele
+print(stri)
