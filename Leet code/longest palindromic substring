@@ -1,0 +1,9 @@
+s = "esmadammalayalam"
+arr = []
+arr_count = []
+for i in range(len(s)-1):
+    for j in range(i+1, len(s)):
+        if s[i:j+1] == s[i:j+1][::-1]:
+            arr.append(s[i:j+1])
+            arr_count.append(len(s[i:j+1]))
+print(arr[arr_count.index(max(arr_count))])
