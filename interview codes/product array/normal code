@@ -1,0 +1,27 @@
+"""
+for an array of n integers, build a product array such that the ith element of product array should be product of all the elements of the original array except the ith element of original array.
+"""
+
+
+
+def productExceptI(l, i):
+    arr = []
+    for ele in range(len(l)):
+        p = 1
+        for j in range(len(l)):
+            if j == i:
+                continue
+            else:
+                p *= l[j]
+        return p
+
+l = [1,2,3,4,5]
+arr = []
+for i in range(len(l)):
+    arr.append(productExceptI(l, i))
+print(arr)
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
