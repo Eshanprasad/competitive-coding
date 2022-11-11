@@ -1,0 +1,8 @@
+l = [1,2,3,4,5]
+p = 1
+for i in range(len(l)):
+    p *= l[i]
+arr = [p//l[i] for i in range(len(l))]
+print(arr)
+
+# output : [120, 60, 40, 30, 24]
