@@ -1,0 +1,19 @@
+testcases = int(input("test cases"))
+output_array = []
+for test in range(testcases):
+    n = int(input("number of elements in array"))
+    arr = [int(x) for x in input("enter elements of array").split()]
+    flag = True
+    right = sum(arr) - arr[0]         # I use this variable for sum of elements which are right side of equilibrium index
+    left = arr[0]                # I use this variable for sum of elements which are left side of equilibrium index
+    for i in range(1,len(arr)):
+        right = right-arr[i]
+        if right==left:
+            flag=False
+            output_array.append(i)
+            break
+        left+=arr[i]
+    if flag==True:
+        output_array.append(-1)
+for ele in output_array:
+    print(ele)
