@@ -1,0 +1,17 @@
+def printMatrix(l, r, c):
+    for i in range(r):
+        for j in range(c):
+            print(l[i][j], end=" ")
+        print()
+
+
+r = int(input('enter number of rows: '))
+c = int(input('enter number of columns: '))
+l = []
+for i in range(r):
+    l1 = []
+    for j in range(c):
+        l1.append(int(input("enter {}th row, {}th column element: ".format(i, j))))
+    l.append(l1)
+    print()
+printMatrix(l, r, c)
