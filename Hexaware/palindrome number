@@ -1,0 +1,34 @@
+"""
+Problem Statement :
+
+Write a Program to Identify Whether the given number N is a Palindrome based
+upon following operation.
+
+Add The given number and its Reverse.
+
+Check Whether the Obtained Sum after the first Operation is Palindrome or not, If
+Not then repeat the above operation.
+
+The above operation will be continue untill a Palindromic number is found.
+
+Print the palindromic number as OUTPUT.
+
+
+input1 : 100
+output1 : 101
+
+input2: 195
+output2: 9339
+"""
+
+# code starts here
+i = int(input())
+num = i
+rev = int(str(i)[::-1])
+if str(num)==str(num)[::-1]:
+    print(num)
+else:
+    while str(num)!=str(num)[::-1]:
+        num+=int(str(num)[::-1])
+        if str(num) == str(num)[::-1]:
+            print(num)
