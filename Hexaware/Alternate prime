@@ -1,0 +1,65 @@
+"""
+Problem Statement :
+‘Alex has an array arr of Size N and Need to construct an alternating prime
+sequence from the given set of Integer for a coding challenge . For each integer in
+the array that he is Unable to use, his Penalty increase by the amount of that
+integer value.
+
+‘An alternating prime sequence is defined as a sequence where each prime integer
+is followed by a non prime integer and each non prime integer is followed by a
+prime one.
+
+ 
+
+Your task is to find and print minimum penalty that Alex can have while
+completing the task.
+
+input:
+6
+1
+3
+4
+6
+8
+10
+
+output:
+11
+"""
+
+
+# code starts here
+length_of_array = int(input())
+l = [int(x) for x in input().split()]
+l.sort(reverse=True)
+dup = l.copy()
+out = []
+flag = False
+def isprime(n):
+    if n==1:
+        return False
+    if all(n % i != 0 for i in range(2, n)):
+        return True
+    else:
+        return False
+for i in range(len(l)):
+    if i==0:
+        out.append(l[0])
+        dup.pop(0)
+        flag = isprime(l[0])
+        continue
+    if flag==True:
+        for j in dup:
+            if isprime(j)==False or j==1:
+                out.append(j)
+                dup.remove(j)
+                flag=False
+                break
+    else:
+        for j in dup:
+            if isprime(j):
+                out.append(j)
+                dup.remove(j)
+                flag=True
+                break
+print(sum(dup))
