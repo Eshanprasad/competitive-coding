@@ -1,3 +1,7 @@
+"""
+This code finds the two smallest elements in the list in single iteration
+"""
+
 arr = [5,3,4,5,2,6, 1, 1]
 first = 10000   #assuming 10000 is max number
 second = 10000  #assuming 10000 is max number
