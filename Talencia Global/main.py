@@ -1,7 +1,6 @@
 """
 Write a program to accept name, empId, basic, special allowances, percentage of bonus and monthly tax saving investments.
 
-
 The gross monthly salary is basic + special allowances.
 The gross annual salary also includes the bonus
  Compute the annual salary.
